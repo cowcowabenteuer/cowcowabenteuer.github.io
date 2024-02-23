@@ -1,13 +1,13 @@
 # Site settings
-title: SP Blog
-SEOTitle: SP Blog
+title: CowCow
+SEOTitle: CowCowAbenteuer
 header-img: img/home-sp-hd-2.jpg
-email: pradhan.shrijal@gmail.com
+email: cowcowabenteuer@proton.me
 description: "Blog about my Work and Projects"
 keyword: "Shrijal, SP Blog, Robotics, Perception"
-url: "https://pradhanshrijal.github.io"          # your host, for absolute URL
+url: "https://cowcowabenteuer.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
-github_repo: "https://github.com/pradhanshrijal/pradhanshrijal.github.io.git" # you code repository
+github_repo: "https://github.com/cowcowabenteuer/cowcowabenteuer.github.io.git" # you code repository
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
@@ -61,7 +61,7 @@ gitalk:
   enable: true    #是否开启Gitalk评论
   clientID: 7954d5f87991ba2b9bf6                            #生成的clientID
   clientSecret: 731cfcc1d8670da8c18ed13a171035a8f4322b3b    #生成的clientSecret
-  repo: pradhanshrijal.github.io    #仓库名称
+  repo: cowcowabenteuer.github.io    #仓库名称
   owner: pradhanshrijal    #github用户名
   admin: pradhanshrijal
   distractionFreeMode: true #是否启用类似FB的阴影遮罩
