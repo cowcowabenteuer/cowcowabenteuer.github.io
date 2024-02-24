@@ -95,6 +95,11 @@ service-worker: true
 # Projects
 tales: [
     {
+        title: "The Garden of Uksu",
+        description: "It Begins",
+        href: "/the-garden-of-uksu/"
+    },
+    {
         title: "Gorkha before the rain",
         description: "Summer",
         href: "/gorkha-before-the-rain/"
