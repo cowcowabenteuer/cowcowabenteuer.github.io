@@ -203,19 +203,59 @@ layout: default
                                 </a>
                             </li>
                             {% endif %}
+                            {% if site.instagram_username %}
+                            <li>
+                                <a target="_blank" href="https://www.instagram.com/{{ site.instagram_username }}">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            {% endif %}
+                            {% if site.500px_username %}
+                            <li>
+                                <a target="_blank" href="https://www.500px.com/p/{{ site.500px_username }}">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-500px fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            {% endif %}
+                            {% if site.wanderlog_username %}
+                            <li>
+                                <a target="_blank" href="https://www.wanderlog.com/u/{{ site.wanderlog_username }}">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-leaf fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            {% endif %}
+                            {% if site.komoot_username %}
+                            <li>
+                                <a target="_blank" href="https://www.komoot.com/user/{{ site.komoot_username }}">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-tree fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            {% endif %}
                         </ul>
                         {% if site.email %}
                             <p><a href="mailto:{{site.email}}">✉️ {{site.email}}</a></p>
                         {% endif %}
                     </div>
                 </section>
-                {% if site.projects %}
-                <!-- Projects -->
+                {% if site.tales %}
+                <!-- Tales -->
                 <hr>
-                <h5>PROJECTS</h5>
+                <h5>TALES</h5>
                 <ul class="list-inline">
-                    {% for project in site.projects %}
-                        <li><a href="{{ site.url }}{{ project.href }}">{{project.title}} - {{project.description}}</a></li>
+                    {% for tale in site.tales %}
+                        <li><a href="{{ site.url }}{{ tale.href }}">{{tale.title}} - {{tale.description}}</a></li>
                         <br>
                     {% endfor %}
                 </ul>
