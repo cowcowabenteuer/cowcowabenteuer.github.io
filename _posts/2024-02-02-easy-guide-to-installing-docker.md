@@ -5,6 +5,7 @@ subtitle:   TL;DR copy paste the code ;)
 date:       2024-02-02
 author:     Shrijal Pradhan
 ext-img: "https://www.shutterstock.com/image-vector/whale-container-computer-docker-developer-600nw-2038221926.jpg"
+color-grad: 0.6
 catalog: true
 categories: blog
 permalink: /:categories/easy-guide-to-installing-docker/
