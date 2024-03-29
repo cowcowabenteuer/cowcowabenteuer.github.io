@@ -1,16 +1,15 @@
-# Shrijal's Blog
+# CowCowAbenteuer
 
-# Version 0.0.1
+This blog about my Adventures. Checkout [`[CowCow]`](https://cowcowabenteuer.github.io/).
 
-Design Source [Hux](https://github.com/Huxpro/huxpro.github.io) 
-<br>
+# Tales
 
-Instructions Source [BY Blog](http://qiubaiying.github.io)
-
-# Description
-
-Blog about my Work and Projects.
+- 
 
 # License
 
 This repository is released under the [MIT](LICENSE) License.
+
+# References
+
+Design Source [`[Hux]`](https://github.com/Huxpro/huxpro.github.io). Instructions Source [`[BY Blog]`](http://qiubaiying.github.io).
