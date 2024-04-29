@@ -61,8 +61,8 @@ kramdown:
 # Gitalk
 gitalk:
   enable: true    #是否开启Gitalk评论
-  clientID: 7954d5f87991ba2b9bf6                            #生成的clientID
-  clientSecret: 731cfcc1d8670da8c18ed13a171035a8f4322b3b    #生成的clientSecret
+  clientID: deda4c94150268173032                            #生成的clientID
+  clientSecret: 5d043291691de97275a598a6cc06272b51b3672d    #生成的clientSecret
   repo: cowcowabenteuer.github.io    #仓库名称
   owner: pradhanshrijal    #github用户名
   admin: pradhanshrijal
@@ -97,12 +97,14 @@ service-worker: true
 tales: [
     {
         title: "The Garden of Uksu",
-        description: "It Begins",
+        subtitle: "It Begins",
+        description: "The first adventure",
         href: "/the-garden-of-uksu/"
     },
     {
         title: "Gorkha before the rain",
-        description: "Summer",
+        subtitle: "Summer",
+        description: "A summer in Gorkha",
         href: "/gorkha-before-the-rain/"
     }
 ]

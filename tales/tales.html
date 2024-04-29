@@ -1,10 +1,44 @@
 ---
 layout: page
-title: "Publications"
-description: "Papers I have worked on"
-header-img: "img/post-bg-coffee.jpeg"
-permalink: /publications/
+title: "Tales"
+description: "Stories of my travel"
+ext-img: "https://drscdn.500px.org/photo/1091735202/q%3D90_m%3D2048/v2?sig=ffbccf45842385522e895c3477c6228b9a5d3ecc02ff2b1f9f6eb11f532f0037"
+color-grad: 0.7
+permalink: /tales/
 ---
+
+
+{% if site.tales %}
+<!-- Tales -->
+<hr>
+<h1>Tales</h1>
+<br>
+<div class="one-tag-list">
+    <!-- span class="fa fa-tag listing-seperator" id="{{ tag[0] }}">
+        <span class="tag-text">{{ tag[0] }}</span>
+    </span -->
+    {% for tale in site.tales %}
+        <!-- <li class="listing-item">
+        <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+        </li> -->
+        <div class="post-preview">
+            <a href="{{ site.url }}{{ tale.href }}">
+                <h2 class="post-title">
+                    {{ tale.title }}
+                </h2>
+                {% if tale.description %}
+                <h3 class="post-subtitle">
+                    {{ tale.description }}
+                </h3>
+                {% endif %}
+            </a>
+            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </div>
+        <hr>
+    {% endfor %}
+</div>
+{% endif %}
 
 <!-- Handle Language Change -->
 <script type="text/javascript">

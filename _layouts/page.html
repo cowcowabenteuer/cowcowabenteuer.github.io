@@ -101,10 +101,10 @@ layout: default
                 {% if site.tales %}
                 <!-- Tales -->
                 <hr>
-                <h5>TALES</h5>
+                <h5><a href="{{ site.url }}/tales/">TALES</a></h5>
                 <ul class="list-inline">
                     {% for tale in site.tales %}
-                        <li><a href="{{ site.url }}{{ tale.href }}">{{tale.title}} - {{tale.description}}</a></li>
+                        <li><a href="{{ site.url }}{{ tale.href }}">{{tale.title}} - {{tale.subtitle}}</a></li>
                         <br>
                     {% endfor %}
                 </ul>
