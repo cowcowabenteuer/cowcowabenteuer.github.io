@@ -1,0 +1,142 @@
+---
+layout: page
+title: "Humor"
+description: "Funny Stories"
+ext-img: "https://drscdn.500px.org/photo/1091735202/q%3D90_m%3D2048/v2?sig=ffbccf45842385522e895c3477c6228b9a5d3ecc02ff2b1f9f6eb11f532f0037"
+color-grad: 0.7
+permalink: /humor/
+---
+
+<!-- Introduction to the Humor -->
+<h1>Introduction</h1>
+<p>When I started working after my Master Studies, I had the opportunity to work in an environment with 
+    very motivated individuals; developing a complete robotics stack which would later expand into
+    an automated driving stack. While being a part of this project, although I specialized in a particular field,
+    I wanted to learn about the entire stack on a general level. For this purpose, I devised a general plan to test
+    the available stacks in a simulator. The key word would be modularity.
+</p>
+<p>In the Nepal Bhasha, the language of the Newar people from the Kathmandu Valley, Pha means pig (as there is no word for
+    wild boar). This name was chosen because when I devised the idea back in 2021, I told my self "I will achieve this when
+    pigs will fly!".
+</p>
+<hr>
+<h1>Articles</h1>
+<br>
+<!-- Articles with the Tag humor -->
+{% for tag in site.tags %}
+	<div class="one-tag-list">
+		<!-- span class="fa fa-tag listing-seperator" id="{{ tag[0] }}">
+            <span class="tag-text">{{ tag[0] }}</span>
+        </span -->
+        {% if tag[0] == "humor" %}
+		{% for post in tag[1] %}
+			<!-- <li class="listing-item">
+			<time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+			<a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+			</li> -->
+			<div class="post-preview">
+                <a href="{{ post.url | prepend: site.baseurl }}">
+                    <h2 class="post-title">
+                        {{ post.title }}
+                    </h2>
+                    {% if post.subtitle %}
+                    <h3 class="post-subtitle">
+                        {{ post.subtitle }}
+                    </h3>
+                    {% endif %}
+                </a>
+			    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+		    </div>
+		    <hr>
+		{% endfor %}
+        {% endif %}
+	</div>
+{% endfor %}
+
+<!-- Handle Language Change -->
+<script type="text/javascript">
+    // get nodes
+    var $zh = document.querySelector(".zh");
+    var $en = document.querySelector(".en");
+    var $select = document.querySelector("select");
+
+    // bind hashchange event
+    window.addEventListener('hashchange', _render);
+
+    // handle render
+    function _render(){
+        var _hash = window.location.hash;
+        // en
+        if(_hash == "#en"){
+            $select.selectedIndex = 1;
+            $en.style.display = "block";
+            $zh.style.display = "none";
+        // zh by default
+        }else{
+            // not trigger onChange, otherwise cause a loop call.
+            $select.selectedIndex = 0;
+            $zh.style.display = "block";
+            $en.style.display = "none";
+        }
+    }
+
+    // handle select change
+    function onLanChange(index){
+        if(index == 0){
+            window.location.hash = "#zh"
+        }else{
+            window.location.hash = "#en"
+        }
+    }
+
+    // init
+    _render();
+</script>
+
+
+<!-- Gitalk 评论 start  -->
+{% if site.gitalk.enable %}
+<!-- Gitalk link  -->
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+    <script type="text/javascript">
+    var gitalk = new Gitalk({
+    clientID: '{{site.gitalk.clientID}}',
+    clientSecret: '{{site.gitalk.clientSecret}}',
+    repo: '{{site.gitalk.repo}}',
+    owner: '{{site.gitalk.owner}}',
+    admin: ['{{site.gitalk.admin}}'],
+    distractionFreeMode: {{site.gitalk.distractionFreeMode}},
+    id: 'about',
+    });
+    gitalk.render('gitalk-container');
+</script>
+{% endif %}
+<!-- Gitalk end -->
+
+ <!-- disqus 评论框 start  -->
+{% if site.disqus.enable %}
+
+<div class="comment">
+    <div id="disqus_thread" class="disqus-thread">
+    </div>
+</div>
+<!-- disqus 评论框 end -->
+
+<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "{{site.disqus.username}}";
+    var disqus_identifier = "{{site.disqus.username}}/{{page.url}}";
+    var disqus_url = "{{site.url}}{{page.url}}";
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<!-- disqus 公共JS代码 end -->
+{% endif %}
